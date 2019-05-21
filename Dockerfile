@@ -1,8 +1,8 @@
 FROM cern/cc7-base:latest
 ARG rootversion="6.16.00"
-ARG verion="2.0.1"
+ARG version="2.0.1"
 #LABEL description="CERN ROOT framework"
-LABEL version="${rootversion}"
+LABEL version="xfitter.${version}-root.${rootversion}"
 
 RUN yum -y install epel-release 
 RUN yum -y install gcc-c++ bzip2 libpng libjpeg \
