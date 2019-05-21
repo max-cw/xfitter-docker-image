@@ -22,6 +22,6 @@ ADD https://root.cern.ch/download/root_v${rootversion}.Linux-centos7-x86_64-gcc4
 RUN tar xzf /var/tmp/root.tar.gz -C /opt && rm /var/tmp/root.tar.gz
 
 #Install xfitter
-RUN "wget https://www.xfitter.org/xFitter/xFitter/DownloadPage?action=AttachFile&do=get&target=install-xfitter-${version} -O install-xfitter --no-check-certificate" \
+RUN wget "https://www.xfitter.org/xFitter/xFitter/DownloadPage?action=AttachFile&do=get&target=install-xfitter-${version} -O install-xfitter --no-check-certificate" \
     && /var/tmp/install-xfitter ${version} \
     && rm /var/tmp/install-xfitter
