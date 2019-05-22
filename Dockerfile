@@ -23,6 +23,6 @@ ADD https://root.cern.ch/download/root_v${rootversion}.Linux-centos7-x86_64-gcc4
 RUN tar xzf /var/tmp/root.tar.gz -C /opt && rm /var/tmp/root.tar.gz
 #Install xfitter
 #ADD https://gitlab.cern.ch/fitters/xfitter/raw/release_2.0.1/tools/install-xfitter?inline=false /var/tmp/install-xfitter.sh
-RUN chmod +x ./install-xfitter.sh
-RUN ./install-xfitter.sh 2.0.1
+RUN chmod +x ./xfitter-docker-image/install-xfitter.sh
+RUN ./xfitter-docker-image/install-xfitter.sh 2.0.1
 #RUN rm /var/tmp/install-xfitter.sh && yum -y remove git-all && yum -y clean all
