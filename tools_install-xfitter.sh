@@ -229,34 +229,35 @@ then
 fi
 
 #check some basic dependendencies before starting the installation
-which git >& /dev/null
-if [[ $? != 0 ]]
-then
-    echo "Error, git not found"
-    exit
-fi
+# which git >& /dev/null
+# if [[ $? != 0 ]]
+# then
+#     echo "Error, git not found"
+#     exit
+# fi
 
-which root >& /dev/null
-if [[ $? != 0 ]]
-then
-    echo "Error, root not found"
-    exit
-fi
+# which root >& /dev/null
+# if [[ $? != 0 ]]
+# then
+#     echo "Error, root not found"
+#     exit
+# fi
 
-which wget >& /dev/null
-if [[ $? == 0 ]]
-then
-    http=wget
-else
-    which curl >& /dev/null
-    if [[ $? == 0 ]]
-    then
-	http=curl
-    else
-	echo "Error, wget or curl not found"
-	exit
-    fi
-fi
+# which wget >& /dev/null
+# if [[ $? == 0 ]]
+# then
+#     http=wget
+# else
+#     which curl >& /dev/null
+#     if [[ $? == 0 ]]
+#     then
+# 	http=curl
+#     else
+# 	echo "Error, wget or curl not found"
+# 	exit
+#     fi
+# fi
+http=wget
     
 #directory:
 CURRENTDIR=`pwd`
