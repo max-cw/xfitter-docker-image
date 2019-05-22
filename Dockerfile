@@ -24,6 +24,6 @@ RUN tar xzf /var/tmp/root.tar.gz -C /opt && rm /var/tmp/root.tar.gz
 #Install xfitter
 ADD https://gitlab.cern.ch/fitters/xfitter/raw/release_2.0.1/tools/install-xfitter?inline=false /var/tmp/install-xfitter.sh
 ENV PATH="/usr/bin:${PATH}"
-RUN chmod +x /var/tmp/install-xfitter.sh \
-    && /var/tmp/install-xfitter.sh ${version} \
-    && rm /var/tmp/install-xfitter && yum -y remove git-all && yum -y clean all
+RUN chmod +x /var/tmp/install-xfitter.sh
+RUN /var/tmp/install-xfitter.sh ${version}
+RUN rm /var/tmp/install-xfitter.sh && yum -y remove git-all && yum -y clean all
