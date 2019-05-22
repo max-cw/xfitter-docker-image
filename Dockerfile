@@ -7,7 +7,7 @@ LABEL version="xfitter.${version}-root.${rootversion}"
 
 RUN yum -y install epel-release 
 RUN yum -y install gcc-c++ bzip2 libpng libjpeg \
-    python-devel boost libSM libX11 libXext libXpm libXft gsl-devel python-pip make git-all which \
+    python-devel boost libSM libX11 libXext libXpm libXft gsl-devel python-pip make git-all which autoconf \
     && yum -y clean all
 #RUN pip install --upgrade pip && pip install -U numpy scipy sklearn matplotlib
 #RUN ln -s /usr/bin/cmake3 /usr/bin/cmake
