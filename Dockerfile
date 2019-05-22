@@ -7,7 +7,7 @@ SHELL ["/bin/bash", "-c"]
 
 RUN yum -y install epel-release 
 RUN yum -y install gcc-c++ bzip2 libpng libjpeg \
-    python-devel boost libSM libX11 libXext libXpm libXft gsl-devel python-pip make \
+    python-devel boost libSM libX11 libXext libXpm libXft gsl-devel python-pip make git-all \
     && yum -y clean all
 #RUN pip install --upgrade pip && pip install -U numpy scipy sklearn matplotlib
 #RUN ln -s /usr/bin/cmake3 /usr/bin/cmake
@@ -26,4 +26,4 @@ ADD https://gitlab.cern.ch/fitters/xfitter/raw/release_2.0.1/tools/install-xfitt
 ENV PATH="/usr/bin:${PATH}"
 RUN chmod +x /var/tmp/install-xfitter \
     && /var/tmp/install-xfitter ${version} \
-    && rm /var/tmp/install-xfitter && yum -y clean all
+    && rm /var/tmp/install-xfitter && yum -y remove git-all && yum -y clean all
