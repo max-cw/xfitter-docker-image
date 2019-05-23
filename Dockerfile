@@ -1,6 +1,6 @@
 FROM cern/cc7-base:latest
 ARG rootversion="6.16.00"
-ARG version="2.0.1"
+ARG version="2.0.0"
 #LABEL description="CERN ROOT framework"
 LABEL version="xfitter.${version}-root.${rootversion}"
 #SHELL ["/bin/bash", "-c"]
