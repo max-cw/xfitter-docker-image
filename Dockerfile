@@ -6,7 +6,7 @@ LABEL version="xfitter.${version}-root.${rootversion}"
 #SHELL ["/bin/bash", "-c"]
 
 RUN yum -y install epel-release 
-RUN yum -y install gcc-c++ bzip2 libpng libjpeg \
+RUN yum -y install gcc-c++ gcc-gfortran bzip2 libpng libjpeg \
     python-devel boost-devel libSM libX11 libXext libXpm libXft gsl-devel python-pip make git which wget \
     && yum -y clean all
 #RUN pip install --upgrade pip && pip install -U numpy scipy sklearn matplotlib
